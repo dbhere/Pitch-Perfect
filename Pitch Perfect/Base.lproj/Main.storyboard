@@ -30,12 +30,18 @@
                                 <color key="textColor" red="0.16405276590000001" green="0.37124318090000002" blue="0.4932553522" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jp9-kq-Nn6">
+                                <rect key="frame" x="275" y="530" width="50" height="50"/>
+                                <state key="normal" image="stop"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="m7Z-A1-865" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AzZ-az-s7t"/>
                             <constraint firstItem="xqd-F6-rV6" firstAttribute="top" secondItem="m7Z-A1-865" secondAttribute="bottom" constant="30" id="CUQ-SQ-K7M"/>
                             <constraint firstItem="xqd-F6-rV6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dmi-PA-oqf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jp9-kq-Nn6" secondAttribute="bottom" constant="20" id="UCR-Ky-ULf"/>
+                            <constraint firstItem="jp9-kq-Nn6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d1F-an-EGr"/>
                             <constraint firstItem="m7Z-A1-865" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jQM-Hh-mRs"/>
                         </constraints>
                     </view>
@@ -50,5 +56,6 @@
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="stop" width="50" height="50"/>
     </resources>
 </document>
