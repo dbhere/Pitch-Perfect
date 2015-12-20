@@ -15,6 +15,7 @@
 		3530DDC81C268B75002B8F7C /* Pitch_PerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530DDC71C268B75002B8F7C /* Pitch_PerfectUITests.swift */; };
 		3530DDD61C26D7AD002B8F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3530DDD51C26D7AD002B8F7C /* Assets.xcassets */; };
 		3530DDD81C26FBBF002B8F7C /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530DDD71C26FBBF002B8F7C /* PlaySoundsViewController.swift */; };
+		3530DDDA1C26FFAE002B8F7C /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3530DDD91C26FFAE002B8F7C /* movie_quote.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3530DDC91C268B75002B8F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3530DDD51C26D7AD002B8F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3530DDD71C26FBBF002B8F7C /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		3530DDD91C26FFAE002B8F7C /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				3530DDD51C26D7AD002B8F7C /* Assets.xcassets */,
 				3530DDB01C268B75002B8F7C /* LaunchScreen.storyboard */,
 				3530DDB31C268B75002B8F7C /* Info.plist */,
+				3530DDD91C26FFAE002B8F7C /* movie_quote.mp3 */,
 			);
 			path = "Pitch Perfect";
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			files = (
 				3530DDB21C268B75002B8F7C /* LaunchScreen.storyboard in Resources */,
 				3530DDD61C26D7AD002B8F7C /* Assets.xcassets in Resources */,
+				3530DDDA1C26FFAE002B8F7C /* movie_quote.mp3 in Resources */,
 				3530DDAD1C268B75002B8F7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

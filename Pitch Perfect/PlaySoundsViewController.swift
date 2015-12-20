@@ -7,16 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
 
+    var audioPlayer:AVAudioPlayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if let filePath = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3"){
+            let pathURL = NSURL(fileURLWithPath: filePath)
+            audioPlayer = try!
+                AVAudioPlayer(contentsOfURL: pathURL)
+        }else {
+            print("file not found")
+        }
+        
     }
 
     @IBAction func playSlowSounds(sender: UIButton) {
+        audioPlayer.play()
     }
     
     
