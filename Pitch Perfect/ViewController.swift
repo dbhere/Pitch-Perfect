@@ -28,6 +28,9 @@ class ViewController: UIViewController {
         print("I'm recording")
     
     }
+    @IBAction func stopRecording(sender: UIButton) {
+        recordingInProgress.hidden = true
+    }
 
 }
 
