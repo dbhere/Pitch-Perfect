@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var recordingInProgress: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     override func viewDidLoad() {
@@ -17,10 +18,12 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
+        recordButton.enabled = true
     }
     
 
     @IBAction func recordAudio(sender: UIButton) {
+        recordButton.enabled = false
         //add text "正在录音"
         recordingInProgress.hidden = false
         stopButton.hidden = false
