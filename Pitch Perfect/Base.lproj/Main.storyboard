@@ -24,17 +24,28 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RMf-ZN-sMp"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在录制" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqd-F6-rV6">
+                                <rect key="frame" x="262" y="380" width="76" height="23"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" red="0.16405276590000001" green="0.37124318090000002" blue="0.4932553522" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="m7Z-A1-865" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AzZ-az-s7t"/>
+                            <constraint firstItem="xqd-F6-rV6" firstAttribute="top" secondItem="m7Z-A1-865" secondAttribute="bottom" constant="30" id="CUQ-SQ-K7M"/>
+                            <constraint firstItem="xqd-F6-rV6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dmi-PA-oqf"/>
                             <constraint firstItem="m7Z-A1-865" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jQM-Hh-mRs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recordingInProgress" destination="xqd-F6-rV6" id="Wh6-Jh-ixa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="668" y="383"/>
+            <point key="canvasLocation" x="519" y="246"/>
         </scene>
     </scenes>
     <resources>
