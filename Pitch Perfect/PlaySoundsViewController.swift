@@ -19,6 +19,7 @@ class PlaySoundsViewController: UIViewController {
             let pathURL = NSURL(fileURLWithPath: filePath)
             audioPlayer = try!
                 AVAudioPlayer(contentsOfURL: pathURL)
+            audioPlayer.enableRate = true
         }else {
             print("file not found")
         }
@@ -26,6 +27,8 @@ class PlaySoundsViewController: UIViewController {
     }
 
     @IBAction func playSlowSounds(sender: UIButton) {
+        audioPlayer.stop()
+        audioPlayer.rate = 0.5
         audioPlayer.play()
     }
     
