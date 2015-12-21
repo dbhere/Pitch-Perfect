@@ -29,11 +29,7 @@ class PlaySoundsViewController: UIViewController {
 
     //按照不同速率播放声音
     func playSounds(rate:Float){
-        audioPlayer.stop()
-        audioPlayer2.stop()
-        audioEngine.stop()
-        audioEngine.reset()
-        
+        stopAnySounds()
         audioPlayer.rate = rate
         audioPlayer.currentTime = 0.0
         audioPlayer.play()
@@ -48,18 +44,19 @@ class PlaySoundsViewController: UIViewController {
     }
     
     //暂停键
-    @IBAction func stopPlaySounds(sender: UIButton) {
+    func stopAnySounds(){
         audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
         audioPlayer2.stop()
     }
+    @IBAction func stopPlaySounds(sender: UIButton) {
+        stopAnySounds()
+    }
+    
     //按照不同音调播放
     func playsoundsWithPitch(pitch:Float){
-        audioPlayer.stop()
-        audioPlayer2.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAnySounds()
         
         let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
@@ -88,10 +85,7 @@ class PlaySoundsViewController: UIViewController {
 
     //播放回声效果
     @IBAction func playEchoAudio(sender: UIButton) {
-        audioPlayer.stop()
-        audioPlayer2.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        stopAnySounds()
         
         audioPlayer.currentTime = 0.0
         audioPlayer.play()
