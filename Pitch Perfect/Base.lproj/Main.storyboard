@@ -118,39 +118,61 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uE-JB-4Tf">
-                                <rect key="frame" x="480" y="131" width="100" height="100"/>
+                                <rect key="frame" x="500" y="131" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="DZG-0R-Byp"/>
+                                    <constraint firstAttribute="width" constant="80" id="Jk8-KF-A3F"/>
+                                </constraints>
                                 <state key="normal" image="rabbit"/>
                                 <connections>
                                     <action selector="playRapidSounds:" destination="NsW-80-IbZ" eventType="touchUpInside" id="tQF-OY-HyU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWd-WP-u6A">
-                                <rect key="frame" x="20" y="264" width="100" height="100"/>
+                                <rect key="frame" x="20" y="244" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="V03-hN-PsQ"/>
+                                    <constraint firstAttribute="height" constant="80" id="jHj-FY-u4x"/>
+                                </constraints>
                                 <state key="normal" image="chipmunk"/>
                                 <connections>
                                     <action selector="playChipmunkVoice:" destination="NsW-80-IbZ" eventType="touchUpInside" id="Mmx-zk-4pS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkv-Zg-1F8">
-                                <rect key="frame" x="480" y="264" width="100" height="100"/>
+                                <rect key="frame" x="500" y="244" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="pcn-Cx-JCD"/>
+                                    <constraint firstAttribute="width" constant="80" id="rw4-m8-T0T"/>
+                                </constraints>
                                 <state key="normal" image="darthVader"/>
                                 <connections>
                                     <action selector="playDarthVaderVoice:" destination="NsW-80-IbZ" eventType="touchUpInside" id="WSt-cE-WzG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hm9-HP-lSC">
-                                <rect key="frame" x="20" y="131" width="100" height="100"/>
+                                <rect key="frame" x="20" y="131" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="SHo-1i-FfU"/>
+                                    <constraint firstAttribute="width" constant="80" id="vZC-Nz-esm"/>
+                                </constraints>
                                 <state key="normal" image="snail"/>
                                 <connections>
                                     <action selector="playSlowSounds:" destination="NsW-80-IbZ" eventType="touchUpInside" id="05U-g9-axQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjd-53-4gL">
+                                <rect key="frame" x="20" y="357" width="80" height="80"/>
+                                <state key="normal" image="echo"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.67856157289999997" green="0.80362401829999996" blue="0.45411240609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Hm9-HP-lSC" firstAttribute="top" secondItem="94f-dg-y4g" secondAttribute="bottom" constant="67" id="2WW-7x-o8n"/>
+                            <constraint firstItem="jjd-53-4gL" firstAttribute="top" secondItem="QWd-WP-u6A" secondAttribute="bottom" constant="33" id="D61-EX-V51"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Hm9-HP-lSC" secondAttribute="leading" id="PYD-Ct-mlL"/>
                             <constraint firstItem="5uE-JB-4Tf" firstAttribute="top" secondItem="94f-dg-y4g" secondAttribute="bottom" constant="67" id="Yet-fx-S2F"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jjd-53-4gL" secondAttribute="leading" id="e89-IR-hY8"/>
                             <constraint firstAttribute="leadingMargin" secondItem="QWd-WP-u6A" secondAttribute="leading" id="eWX-cw-gqx"/>
                             <constraint firstItem="2UF-6Q-si0" firstAttribute="centerX" secondItem="X7O-aH-TXW" secondAttribute="centerX" id="m46-XD-IQM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5uE-JB-4Tf" secondAttribute="trailing" id="mQL-Sc-UV0"/>
@@ -187,6 +209,7 @@
     <resources>
         <image name="chipmunk" width="100" height="100"/>
         <image name="darthVader" width="100" height="100"/>
+        <image name="echo" width="80" height="80"/>
         <image name="microphone" width="100" height="100"/>
         <image name="pause" width="80" height="80"/>
         <image name="rabbit" width="100" height="100"/>
