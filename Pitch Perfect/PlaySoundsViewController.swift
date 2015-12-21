@@ -49,6 +49,7 @@ class PlaySoundsViewController: UIViewController {
         audioEngine.stop()
         audioEngine.reset()
         audioPlayer2.stop()
+        audioPlayer.rate = 1.0
     }
     @IBAction func stopPlaySounds(sender: UIButton) {
         stopAnySounds()
@@ -90,7 +91,7 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.currentTime = 0.0
         audioPlayer.play()
         
-        let delay:NSTimeInterval = 0.1
+        let delay:NSTimeInterval = 0.3
         let playtime:NSTimeInterval = audioPlayer2.deviceCurrentTime + delay
         audioPlayer2.volume = 0.5
         audioPlayer2.currentTime = 0.0
