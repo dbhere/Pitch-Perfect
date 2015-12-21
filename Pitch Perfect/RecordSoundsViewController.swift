@@ -12,7 +12,7 @@ import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
     var audioRecorder:AVAudioRecorder!
-    
+    var recordedAudio:RecordedAudio!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var recordingInProgress: UILabel!
     @IBOutlet weak var stopButton: UIButton!
@@ -54,7 +54,26 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
     }
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
-            
+        if flag{
+            //保存录制的音频
+            recordedAudio = RecordedAudio()
+            recordedAudio.filePathUrl = recorder.url
+            recordedAudio.title = recorder.url.lastPathComponent
+            //切换视图
+            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+        } else{
+            print("录制失败")
+            recordButton.enabled = true
+            stopButton.hidden = true
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue == "stopRecording"{
+            let PlaySoundsVC:PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
+            let data = sender as! RecordedAudio
+            PlaySoundsVC.receivedAudio = data
+        }
     }
     
     @IBAction func stopRecording(sender: UIButton) {
