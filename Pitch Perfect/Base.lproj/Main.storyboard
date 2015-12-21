@@ -223,9 +223,9 @@
         <image name="darthVader" width="100" height="100"/>
         <image name="echo" width="80" height="80"/>
         <image name="microphone" width="100" height="100"/>
-        <image name="pause" width="80" height="80"/>
+        <image name="pause" width="100" height="100"/>
         <image name="rabbit" width="100" height="100"/>
-        <image name="resume" width="80" height="80"/>
+        <image name="resume" width="100" height="100"/>
         <image name="reverb" width="80" height="80"/>
         <image name="snail" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>

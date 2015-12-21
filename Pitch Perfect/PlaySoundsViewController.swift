@@ -25,6 +25,11 @@ class PlaySoundsViewController: UIViewController {
         audioEngine = AVAudioEngine()
         audioFile = try! AVAudioFile(forReading: receivedAudio.filePathUrl)
         audioPlayer2 = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
+        
+        //现在能够正常从耳机或者speaker发出声音了
+        let session:AVAudioSession = AVAudioSession.sharedInstance()
+        try! session.setCategory(AVAudioSessionCategoryAmbient)
+        
     }
 
     //按照不同速率播放声音
