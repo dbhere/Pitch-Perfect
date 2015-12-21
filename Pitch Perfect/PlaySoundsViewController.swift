@@ -12,6 +12,7 @@ import AVFoundation
 class PlaySoundsViewController: UIViewController {
 
     var audioPlayer:AVAudioPlayer!
+    var audioPlayer2:AVAudioPlayer!
     var receivedAudio:RecordedAudio!
     var audioEngine:AVAudioEngine!
     var audioFile:AVAudioFile!
@@ -23,10 +24,13 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.enableRate = true
         audioEngine = AVAudioEngine()
         audioFile = try! AVAudioFile(forReading: receivedAudio.filePathUrl)
+        audioPlayer2 = try! AVAudioPlayer(contentsOfURL: receivedAudio.filePathUrl)
     }
 
+    //按照不同速率播放声音
     func playSounds(rate:Float){
         audioPlayer.stop()
+        audioPlayer2.stop()
         audioEngine.stop()
         audioEngine.reset()
         
@@ -43,14 +47,17 @@ class PlaySoundsViewController: UIViewController {
         playSounds(1.5)
     }
     
+    //暂停键
     @IBAction func stopPlaySounds(sender: UIButton) {
         audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
+        audioPlayer2.stop()
     }
-    
+    //按照不同音调播放
     func playsoundsWithPitch(pitch:Float){
         audioPlayer.stop()
+        audioPlayer2.stop()
         audioEngine.stop()
         audioEngine.reset()
         
@@ -79,6 +86,22 @@ class PlaySoundsViewController: UIViewController {
         playsoundsWithPitch(-1000)
     }
 
+    //播放回声效果
+    @IBAction func playEchoAudio(sender: UIButton) {
+        audioPlayer.stop()
+        audioPlayer2.stop()
+        audioEngine.stop()
+        audioEngine.reset()
+        
+        audioPlayer.currentTime = 0.0
+        audioPlayer.play()
+        
+        let delay:NSTimeInterval = 0.1
+        let playtime:NSTimeInterval = audioPlayer2.deviceCurrentTime + delay
+        audioPlayer2.volume = 0.5
+        audioPlayer2.currentTime = 0.0
+        audioPlayer2.playAtTime(playtime)
+    }
     
 
 }

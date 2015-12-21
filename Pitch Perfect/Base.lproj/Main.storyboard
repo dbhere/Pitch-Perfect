@@ -164,6 +164,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjd-53-4gL">
                                 <rect key="frame" x="20" y="357" width="80" height="80"/>
                                 <state key="normal" image="echo"/>
+                                <connections>
+                                    <action selector="playEchoAudio:" destination="NsW-80-IbZ" eventType="touchUpInside" id="5Ea-XQ-9MB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.67856157289999997" green="0.80362401829999996" blue="0.45411240609999998" alpha="1" colorSpace="calibratedRGB"/>
