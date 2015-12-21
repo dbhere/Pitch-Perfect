@@ -60,9 +60,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag{
             //保存录制的音频
-            recordedAudio = RecordedAudio()
-            recordedAudio.filePathUrl = recorder.url
-            recordedAudio.title = recorder.url.lastPathComponent
+            recordedAudio = RecordedAudio(filePathUrl: recorder.url, title: recorder.url.lastPathComponent!)
             //切换视图
             self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
         } else{

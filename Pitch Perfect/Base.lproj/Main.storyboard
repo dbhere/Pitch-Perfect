@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--录制-->
+        <!--变音器-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,7 +57,7 @@
                             <constraint firstItem="m7Z-A1-865" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jQM-Hh-mRs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="录制" id="C0h-bU-RtF"/>
+                    <navigationItem key="navigationItem" title="变音器" id="C0h-bU-RtF"/>
                     <connections>
                         <outlet property="readyToRecordLabel" destination="C2K-I6-oiK" id="bZE-15-vj4"/>
                         <outlet property="recordButton" destination="m7Z-A1-865" id="jFT-5Z-6Td"/>
