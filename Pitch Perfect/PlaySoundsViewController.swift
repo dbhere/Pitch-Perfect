@@ -97,5 +97,25 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer2.playAtTime(playtime)
     }
     
+    //播放混响效果
+    @IBAction func playReverbAudio(sender: UIButton) {
+        stopAnySounds()
+        
+        let audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
+        
+        let audioReverbEffect = AVAudioUnitReverb()
+        audioReverbEffect.wetDryMix = 50.0
+        audioEngine.attachNode(audioReverbEffect)
+        audioEngine.connect(audioPlayerNode, to: audioReverbEffect, format: nil)
+        audioEngine.connect(audioReverbEffect, to: audioEngine.outputNode, format: nil)
+        
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        try! audioEngine.start()
+        audioPlayerNode.play()
+
+    }
+    
+    
 
 }

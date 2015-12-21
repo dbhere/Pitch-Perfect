@@ -171,6 +171,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISh-E3-bon">
                                 <rect key="frame" x="500" y="357" width="80" height="80"/>
                                 <state key="normal" image="reverb"/>
+                                <connections>
+                                    <action selector="playReverbAudio:" destination="NsW-80-IbZ" eventType="touchUpInside" id="yLF-q4-tG6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.67856157289999997" green="0.80362401829999996" blue="0.45411240609999998" alpha="1" colorSpace="calibratedRGB"/>
