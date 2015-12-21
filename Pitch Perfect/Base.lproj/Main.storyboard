@@ -168,10 +168,16 @@
                                     <action selector="playEchoAudio:" destination="NsW-80-IbZ" eventType="touchUpInside" id="5Ea-XQ-9MB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISh-E3-bon">
+                                <rect key="frame" x="500" y="357" width="80" height="80"/>
+                                <state key="normal" image="reverb"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.67856157289999997" green="0.80362401829999996" blue="0.45411240609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Hm9-HP-lSC" firstAttribute="top" secondItem="94f-dg-y4g" secondAttribute="bottom" constant="67" id="2WW-7x-o8n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ISh-E3-bon" secondAttribute="trailing" id="Aau-md-YOh"/>
+                            <constraint firstItem="ISh-E3-bon" firstAttribute="top" secondItem="Nkv-Zg-1F8" secondAttribute="bottom" constant="33" id="BYC-Qi-ye7"/>
                             <constraint firstItem="jjd-53-4gL" firstAttribute="top" secondItem="QWd-WP-u6A" secondAttribute="bottom" constant="33" id="D61-EX-V51"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Hm9-HP-lSC" secondAttribute="leading" id="PYD-Ct-mlL"/>
                             <constraint firstItem="5uE-JB-4Tf" firstAttribute="top" secondItem="94f-dg-y4g" secondAttribute="bottom" constant="67" id="Yet-fx-S2F"/>
@@ -217,6 +223,7 @@
         <image name="pause" width="80" height="80"/>
         <image name="rabbit" width="100" height="100"/>
         <image name="resume" width="80" height="80"/>
+        <image name="reverb" width="80" height="80"/>
         <image name="snail" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
     </resources>
