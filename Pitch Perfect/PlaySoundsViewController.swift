@@ -78,6 +78,9 @@ class PlaySoundsViewController: UIViewController {
         playsoundsWithPitch(1000)
     }
     
+    @IBAction func playDarthVaderVoice(sender: UIButton) {
+        playsoundsWithPitch(-1000)
+    }
 
     
 

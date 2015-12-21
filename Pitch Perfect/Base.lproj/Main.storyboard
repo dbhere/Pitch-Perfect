@@ -101,6 +101,13 @@
                                     <action selector="playChipmunkVoice:" destination="NsW-80-IbZ" eventType="touchUpInside" id="Mmx-zk-4pS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nkv-Zg-1F8">
+                                <rect key="frame" x="480" y="264" width="100" height="100"/>
+                                <state key="normal" image="darthVader"/>
+                                <connections>
+                                    <action selector="playDarthVaderVoice:" destination="NsW-80-IbZ" eventType="touchUpInside" id="WSt-cE-WzG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -112,6 +119,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="5uE-JB-4Tf" secondAttribute="trailing" id="mQL-Sc-UV0"/>
                             <constraint firstItem="MLS-eR-G6w" firstAttribute="top" secondItem="2UF-6Q-si0" secondAttribute="bottom" constant="31" id="oBV-Cl-FV8"/>
                             <constraint firstItem="QWd-WP-u6A" firstAttribute="top" secondItem="Hm9-HP-lSC" secondAttribute="bottom" constant="33" id="uC5-uT-pWF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nkv-Zg-1F8" secondAttribute="trailing" id="xHx-gz-kVg"/>
+                            <constraint firstItem="Nkv-Zg-1F8" firstAttribute="top" secondItem="5uE-JB-4Tf" secondAttribute="bottom" constant="33" id="yep-CO-oQu"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -140,6 +149,7 @@
     </scenes>
     <resources>
         <image name="chipmunk" width="100" height="100"/>
+        <image name="darthVader" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="rabbit" width="100" height="100"/>
         <image name="snail" width="100" height="100"/>
