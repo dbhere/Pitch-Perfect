@@ -38,19 +38,28 @@
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6U2-c8-W9M"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击麦克风图标开始录制" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2K-I6-oiK">
+                                <rect key="frame" x="207" y="382" width="187" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40392156862745099" green="0.56862745098039214" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.678561572914819" green="0.80362401832460728" blue="0.45411240611433307" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="m7Z-A1-865" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AzZ-az-s7t"/>
                             <constraint firstItem="xqd-F6-rV6" firstAttribute="top" secondItem="m7Z-A1-865" secondAttribute="bottom" constant="30" id="CUQ-SQ-K7M"/>
                             <constraint firstItem="xqd-F6-rV6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dmi-PA-oqf"/>
+                            <constraint firstItem="C2K-I6-oiK" firstAttribute="top" secondItem="m7Z-A1-865" secondAttribute="bottom" constant="32" id="Mha-Pk-gWB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jp9-kq-Nn6" secondAttribute="bottom" constant="20" id="UCR-Ky-ULf"/>
+                            <constraint firstItem="C2K-I6-oiK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YJu-gX-RsU"/>
                             <constraint firstItem="jp9-kq-Nn6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d1F-an-EGr"/>
                             <constraint firstItem="m7Z-A1-865" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jQM-Hh-mRs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="录制" id="C0h-bU-RtF"/>
                     <connections>
+                        <outlet property="readyToRecordLabel" destination="C2K-I6-oiK" id="bZE-15-vj4"/>
                         <outlet property="recordButton" destination="m7Z-A1-865" id="jFT-5Z-6Td"/>
                         <outlet property="recordingInProgress" destination="xqd-F6-rV6" id="Wh6-Jh-ixa"/>
                         <outlet property="stopButton" destination="jp9-kq-Nn6" id="eBB-tF-LUQ"/>

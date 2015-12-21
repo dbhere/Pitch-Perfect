@@ -16,12 +16,15 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var recordingInProgress: UILabel!
     @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var readyToRecordLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func viewWillAppear(animated: Bool) {
         stopButton.hidden = true
         recordButton.enabled = true
+        readyToRecordLabel.hidden = false
     }
     
 
@@ -30,6 +33,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
         //add text "正在录音"
         recordingInProgress.hidden = false
         stopButton.hidden = false
+        readyToRecordLabel.hidden = true
         // 录音
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
