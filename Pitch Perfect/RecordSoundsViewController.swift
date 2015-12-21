@@ -65,7 +65,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
         pauseRecordButton.enabled = false
         resumeRecordButton.enabled = true
         audioRecorder.pause()
-        recordingInProgress.text = "录音暂停"
+        recordingInProgress.text = "录制暂停"
     }
     @IBAction func resumeRecord(sender: UIButton) {
         pauseRecordButton.enabled = true
