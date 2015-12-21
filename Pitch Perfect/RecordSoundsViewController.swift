@@ -17,6 +17,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
     @IBOutlet weak var recordingInProgress: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var readyToRecordLabel: UILabel!
+    @IBOutlet weak var pauseRecordButton: UIButton!
+    @IBOutlet weak var resumeRecordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +27,20 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
         stopButton.hidden = true
         recordButton.enabled = true
         readyToRecordLabel.hidden = false
+        pauseRecordButton.hidden = true
+        resumeRecordButton.hidden = true
+        pauseRecordButton.enabled = false
+        resumeRecordButton.enabled = false
     }
     
 
     @IBAction func recordAudio(sender: UIButton) {
         recordButton.enabled = false
+        pauseRecordButton.hidden = false
+        resumeRecordButton.hidden = false
+        pauseRecordButton.enabled = true
+        recordingInProgress.text = "正在录制"
+        
         //add text "正在录音"
         recordingInProgress.hidden = false
         stopButton.hidden = false
@@ -49,6 +60,21 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
         audioRecorder.prepareToRecord()
         audioRecorder.record()
     }
+    
+    @IBAction func pauseRecord(sender: UIButton) {
+        pauseRecordButton.enabled = false
+        resumeRecordButton.enabled = true
+        audioRecorder.pause()
+        recordingInProgress.text = "录音暂停"
+    }
+    @IBAction func resumeRecord(sender: UIButton) {
+        pauseRecordButton.enabled = true
+        resumeRecordButton.enabled = false
+        recordingInProgress.text = "正在录制"
+        audioRecorder.record()
+    }
+    
+    
     
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag{

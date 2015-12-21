@@ -22,7 +22,7 @@
                                 <rect key="frame" x="250" y="250" width="100" height="100"/>
                                 <state key="normal" image="microphone"/>
                                 <connections>
-                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RMf-ZN-sMp"/>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYo-fl-rNd"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在录制" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqd-F6-rV6">
@@ -39,29 +39,57 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击麦克风图标开始录制" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2K-I6-oiK">
-                                <rect key="frame" x="207" y="382" width="187" height="21"/>
+                                <rect key="frame" x="207" y="382" width="187" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.40392156862745099" green="0.56862745098039214" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lj-4t-f21">
+                                <rect key="frame" x="354" y="464" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="CaM-0X-n5T"/>
+                                    <constraint firstAttribute="height" constant="40" id="euL-58-cBf"/>
+                                </constraints>
+                                <state key="normal" image="resume"/>
+                                <connections>
+                                    <action selector="resumeRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ov5-Zc-kuC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktg-nH-Gdi">
+                                <rect key="frame" x="207" y="464" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pei-CG-N9U"/>
+                                    <constraint firstAttribute="width" constant="40" id="sR9-wG-X8q"/>
+                                </constraints>
+                                <state key="normal" image="pause"/>
+                                <connections>
+                                    <action selector="pauseRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3UD-cX-n7x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.678561572914819" green="0.80362401832460728" blue="0.45411240611433307" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="m7Z-A1-865" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AzZ-az-s7t"/>
+                            <constraint firstItem="jp9-kq-Nn6" firstAttribute="top" secondItem="2lj-4t-f21" secondAttribute="bottom" constant="26" id="BbO-i3-32N"/>
                             <constraint firstItem="xqd-F6-rV6" firstAttribute="top" secondItem="m7Z-A1-865" secondAttribute="bottom" constant="30" id="CUQ-SQ-K7M"/>
                             <constraint firstItem="xqd-F6-rV6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dmi-PA-oqf"/>
                             <constraint firstItem="C2K-I6-oiK" firstAttribute="top" secondItem="m7Z-A1-865" secondAttribute="bottom" constant="32" id="Mha-Pk-gWB"/>
+                            <constraint firstItem="2lj-4t-f21" firstAttribute="leading" secondItem="jp9-kq-Nn6" secondAttribute="trailing" constant="29" id="T4l-QV-09c"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jp9-kq-Nn6" secondAttribute="bottom" constant="20" id="UCR-Ky-ULf"/>
                             <constraint firstItem="C2K-I6-oiK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YJu-gX-RsU"/>
+                            <constraint firstItem="jp9-kq-Nn6" firstAttribute="top" secondItem="Ktg-nH-Gdi" secondAttribute="bottom" constant="26" id="cjt-7A-95g"/>
                             <constraint firstItem="jp9-kq-Nn6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d1F-an-EGr"/>
                             <constraint firstItem="m7Z-A1-865" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jQM-Hh-mRs"/>
+                            <constraint firstItem="jp9-kq-Nn6" firstAttribute="leading" secondItem="Ktg-nH-Gdi" secondAttribute="trailing" constant="28" id="qXR-Q9-jwP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="变音器" id="C0h-bU-RtF"/>
                     <connections>
+                        <outlet property="pauseRecordButton" destination="Ktg-nH-Gdi" id="RLp-fc-3b5"/>
                         <outlet property="readyToRecordLabel" destination="C2K-I6-oiK" id="bZE-15-vj4"/>
-                        <outlet property="recordButton" destination="m7Z-A1-865" id="jFT-5Z-6Td"/>
+                        <outlet property="recordButton" destination="m7Z-A1-865" id="3LY-FJ-SG1"/>
                         <outlet property="recordingInProgress" destination="xqd-F6-rV6" id="Wh6-Jh-ixa"/>
+                        <outlet property="resumeRecordButton" destination="2lj-4t-f21" id="Idb-3u-Oui"/>
                         <outlet property="stopButton" destination="jp9-kq-Nn6" id="eBB-tF-LUQ"/>
                         <segue destination="NsW-80-IbZ" kind="show" identifier="stopRecording" id="15l-SE-PPQ"/>
                     </connections>
@@ -160,7 +188,9 @@
         <image name="chipmunk" width="100" height="100"/>
         <image name="darthVader" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
+        <image name="pause" width="80" height="80"/>
         <image name="rabbit" width="100" height="100"/>
+        <image name="resume" width="80" height="80"/>
         <image name="snail" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
     </resources>
